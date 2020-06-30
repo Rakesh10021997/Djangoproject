@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/demo.css "%}">
+    <title></title>
+  </head>
+  <body>
+    <h1>Hi django form for student registration:</h1>
+
+    <div class="container" align="center">
+      <form method="post">
+        {{form.as_p}}
+        {% csrf_token  %}
+       <input type="submit" class="btn btn-primary" value="Register">
+      </form>
+
+
+    </div>
+  </body>
+</html>
